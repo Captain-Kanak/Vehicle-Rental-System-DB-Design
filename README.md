@@ -13,7 +13,7 @@ The database consists of three main tables:
 2. **Vehicles:** Manages vehicle details, types, and availability status.
 3. **Bookings:** Tracks rental transactions between users and vehicles.
 
-**ERD Link:** [[ERD Link]](https://drawsql.app/teams/lazy-programmer-2/diagrams/vehicle-rental-system-management)
+**ERD Link:** [ERD Link](https://drawsql.app/teams/lazy-programmer-2/diagrams/vehicle-rental-system-management)
 
 ## Key Features
 - **One-to-Many Relationship:** One user can have multiple bookings.
