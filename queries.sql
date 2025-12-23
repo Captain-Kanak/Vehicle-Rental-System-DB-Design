@@ -76,8 +76,7 @@ select
   v.name as vehicle_name,
   b.start_date,
   b.end_date,
-  b.status,
-  b.total_cost
+  b.status
 from bookings b
   inner join users u on b.user_id = u.user_id
   inner join vehicles v on b.vehicle_id = v.vehicle_id;
@@ -102,16 +101,12 @@ and status = 'available';
 -- Query 4: Find the total number of bookings for each vehicle and display only those vehicles that have more than 2 bookings
 -- Concepts: GROUP BY, HAVING, COUNT
 select
-  v.vehicle_id,
   v.name,
-  v.type,
   count(b.booking_id) as total_bookings
 from
   vehicles v
   inner join bookings b on v.vehicle_id = b.vehicle_id
 group by
-  v.vehicle_id,
-  v.name,
-  v.type
+  v.name
 having
   count(b.booking_id) > 2;
